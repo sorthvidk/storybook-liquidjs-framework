@@ -1,0 +1,17 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": false,
+        "**/.hg": false,
+        "**/CVS": false,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": false,
+        "**/.history/**": false,
+        "**/.vscode": true,
+        "**/bower_components": false,
+        "**/node_modules": false,
+        "**/node_modules/**": false,
+        ".DS_Store": false
+    },
+    "explorerExclude.backup": {}
+}

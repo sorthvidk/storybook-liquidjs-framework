@@ -1,6 +1,6 @@
 module.exports = {
-  stories: ['../stories/**/*.stories.@(ts|tsx|js|jsx|mdx)'],
-  staticDirs: ['../stories/assets'],
+  stories: ['../stories-liquid/**/*.stories.@(ts|tsx|js|jsx|mdx)'],
+  // staticDirs: ['../stories-liquid'],
   logLevel: 'debug',
   addons: [
     '@storybook/addon-actions',
@@ -18,5 +18,5 @@ module.exports = {
     buildStoriesJson: true,
     breakingChangesV7: true,
   },
-  framework: '@pixi/storybook-webpack5',
+  framework: '@tflx/storybook-webpack5',
 };

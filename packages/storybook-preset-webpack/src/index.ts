@@ -6,6 +6,13 @@ export const webpack: StorybookConfig['webpack'] = (config) => {
   const rules = [
     ...(config.module?.rules || []),
     {
+      test: /\.liquid$/i,
+      use: [
+        'html-loader',
+        
+      ]
+    }
+    /*{
       test: /\.(png|jpg|gif|woff|woff2)$/,
       type: 'asset/inline',
     },
@@ -16,7 +23,7 @@ export const webpack: StorybookConfig['webpack'] = (config) => {
     {
       test: /\.(glsl|frag|vert|wgsl)$/,
       type: 'asset/source',
-    },
+    },*/
   ];
 
   // eslint-disable-next-line no-param-reassign

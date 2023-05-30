@@ -9,9 +9,9 @@
     "@storybook/addon-essentials": "~7.0.0-beta",
     "@storybook/addon-interactions": "~7.0.0-beta",
     "@storybook/addon-links": "~7.0.0-beta",
-    "@pixi/storybook-renderer": "*",
-    "@pixi/storybook-webpack5": "*",
-    "pixi.js": "^6.3.0",
+    "@tflx/storybook-renderer": "*",
+    "@tflx/storybook-webpack5": "*",
+    "liquidjs": "^10.7.1",
     "storybook": "~7.0.0-beta"
   }
 }

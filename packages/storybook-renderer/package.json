@@ -1,11 +1,11 @@
 {
-  "name": "@pixi/storybook-renderer",
+  "name": "@tflx/storybook-renderer",
   "version": "0.0.6",
-  "description": "Storybook PixiJS renderer",
-  "homepage": "https://github.com/pixijs/storybook/tree/main/packages/storybook-renderer",
+  "description": "Storybook LiquidJS renderer",
+  "homepage": "https://github.com/tflx/storybook/tree/main/packages/storybook-renderer",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pixijs/storybook.git",
+    "url": "https://github.com/tflx/storybook.git",
     "directory": "packages/storybook-renderer"
   },
   "license": "MIT",
@@ -55,15 +55,15 @@
   "devDependencies": {
     "@types/deep-equal": "^1.0.1",
     "@types/webpack-env": "^1.18.0",
-    "pixi.js": ">6.0.0",
+    "liquidjs": "^10.7.1",
     "typescript": "~4.6.3"
   },
   "peerDependencies": {
     "@babel/core": "*",
-    "pixi.js": ">6.0.0"
+    "liquidjs": ">10.7.1"
   },
   "engines": {
-    "node": ">=10.13.0"
+    "node": ">=16"
   },
   "publishConfig": {
     "access": "public"

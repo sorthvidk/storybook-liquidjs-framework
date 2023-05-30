@@ -3,8 +3,8 @@ import type { PresetProperty } from '@storybook/types';
 import type { StorybookConfig } from './types';
 
 export const addons: PresetProperty<'addons', StorybookConfig> = [
-  path.dirname(require.resolve(path.join('@pixi/storybook-preset-webpack', 'package.json'))),
-  path.dirname(require.resolve(path.join('@pixi/storybook-renderer', 'package.json'))),
+  path.dirname(require.resolve(path.join('@tflx/storybook-preset-webpack', 'package.json'))),
+  path.dirname(require.resolve(path.join('@tflx/storybook-renderer', 'package.json'))),
 ];
 
 export const core: PresetProperty<'core', StorybookConfig> = async (config, options) => {
