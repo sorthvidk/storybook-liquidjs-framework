@@ -1,7 +1,9 @@
 import test from './liquid-test.liquid'
+import test2 from './liquid-test2.liquid'
 
 export default {
-    title: 'Liquid',
+    title: 'Liquid test',
+    component: test,
     argTypes: {
         label: {
             control: 'text',
@@ -22,13 +24,26 @@ export default {
     },
 };
 
-export const Sample = (args) => {
-    console.log(args);
+export const Sample = {
+    args: {
+      label: 'Button',
+    }
+  };
+
+
+export const Sample2 = (args) => {
     return {
-        template: test,
-        args,
-        data: {
-            label: 'Hello you',
+        component: test2,
+        args
+    }
+};
+
+
+export const Sample3 = (args) => {
+    return {
+        component: `<div style="background: red;">${test2}</div>`,
+        args: {
+            label: 'BUM'
         }
     }
 };

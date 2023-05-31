@@ -1,2 +1,2 @@
 export const parameters = { framework: 'liquidjs' as const };
-export { renderToCanvas } from './render';
+export { render, renderToCanvas } from './render';

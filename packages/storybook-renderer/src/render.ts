@@ -9,72 +9,48 @@ import type { HtmlRenderer } from './types';
 const { Node } = global;
 
 import { Liquid } from 'liquidjs';
-const engine = new Liquid();
+import { template } from '@babel/core';
+let engine : null | Liquid = null;
 
-export const render: ArgsStoryFn<HtmlRenderer> = (args, context) => {
+export const render: ArgsStoryFn<HtmlRenderer> = (args, context) => {  
   const { id, component } = context;
+  
   if (!component) {
-    throw new Error(
-      `Unable to render story ${id} as the component annotation is missing from the default export`
-      );
-    }
-    
-    const element = document.createElement(component);
-    Object.entries(args).forEach(([key, val]) => {
-      // @ts-ignore
-      element[key] = val;
-    });
-    return element;
-    
-    
-  /*
-  const { id, component: Component } = context;
-  if (typeof Component === 'string') {
-    let output = Component;
-    Object.keys(args).forEach((key) => {
-      output = output.replace(`{{${key}}}`, args[key]);
-    });
-    return output;
+    throw new Error( `Unable to render story ${id} as the component annotation is missing from the default export` );
   }
-  if (Component instanceof HTMLElement) {
-    const output = Component.cloneNode(true) as HTMLElement;
-    Object.keys(args).forEach((key) => {
-      output.setAttribute(
-        key,
-        typeof args[key] === 'string' ? args[key] : JSON.stringify(args[key])
-      );
-    });
-
-    return output;
+    
+  return {
+    component,
+    args
   }
-  if (typeof Component === 'function') {
-    return Component(args, context);
-  }
-  */
-
-  console.warn(dedent`
-    Storybook's HTML renderer only supports rendering DOM elements and strings.
-    Received: ${Component}
-  `);
-  throw new Error(`Unable to render story ${id}`);
 };
 
 export function renderToCanvas(
-  { storyFn, kind, name, showMain, showError, forceRemount }: RenderContext<HtmlRenderer>,
+  { storyContext, storyFn, kind, name, showMain, showError, forceRemount }: RenderContext<HtmlRenderer>,
   canvasElement: HtmlRenderer['canvasElement']
 ) {
   const element = storyFn();
-
-  console.log(canvasElement);
-  console.log(element);
   
+  console.log('context:');
+  console.log(storyContext);
+  console.log('story:');
+  console.log(element);
+
+  const template = element.component || storyContext.component
+  const args = {...element.args, ...storyContext.args};
+  const { parameters } = storyContext;
+  
+  console.log('parameters');
+  
+  console.log(parameters);
+  
+  
+  if (!engine) engine = new Liquid();
   
   showMain();
   engine
-    .parseAndRender(element.template, element.data)   // will read and render `views/hello.liquid`
-    .then((res: string) => {
-      console.log(res);
-      
+    .parseAndRender(template, args)   // will read and render `views/hello.liquid`
+    .then((res: string) => {   
       canvasElement.innerHTML = res;
     })
 }
