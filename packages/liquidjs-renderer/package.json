@@ -46,14 +46,12 @@
     "@storybook/docs-tools": "^7.0.0",
     "@storybook/preview-web": "^7.0.0",
     "@storybook/store": "^7.0.0",
-    "deep-equal": "^2.0.5",
     "global": "^4.4.0",
     "react": "16.14.0",
     "react-dom": "16.14.0",
     "ts-dedent": "^2.0.0"
   },
   "devDependencies": {
-    "@types/deep-equal": "^1.0.1",
     "@types/webpack-env": "^1.18.0",
     "liquidjs": "^10.7.1",
     "typescript": "~4.6.3"

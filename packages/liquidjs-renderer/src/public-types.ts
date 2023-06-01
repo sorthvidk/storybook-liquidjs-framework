@@ -9,31 +9,31 @@ import type {
   StrictArgs,
   ProjectAnnotations,
 } from '@storybook/types';
-import type { HtmlRenderer } from './types';
+import type { LiquidjsRenderer } from './types';
 
 export type { Args, ArgTypes, Parameters, StrictArgs } from '@storybook/types';
-export type { HtmlRenderer };
+export type { LiquidjsRenderer };
 
 /**
  * Metadata to configure the stories for a component.
  *
  * @see [Default export](https://storybook.js.org/docs/formats/component-story-format/#default-export)
  */
-export type Meta<TArgs = Args> = ComponentAnnotations<HtmlRenderer, TArgs>;
+export type Meta<TArgs = Args> = ComponentAnnotations<LiquidjsRenderer, TArgs>;
 
 /**
  * Story function that represents a CSFv2 component example.
  *
  * @see [Named Story exports](https://storybook.js.org/docs/formats/component-story-format/#named-story-exports)
  */
-export type StoryFn<TArgs = Args> = AnnotatedStoryFn<HtmlRenderer, TArgs>;
+export type StoryFn<TArgs = Args> = AnnotatedStoryFn<LiquidjsRenderer, TArgs>;
 
 /**
  * Story function that represents a CSFv3 component example.
  *
  * @see [Named Story exports](https://storybook.js.org/docs/formats/component-story-format/#named-story-exports)
  */
-export type StoryObj<TArgs = Args> = StoryAnnotations<HtmlRenderer, TArgs>;
+export type StoryObj<TArgs = Args> = StoryAnnotations<LiquidjsRenderer, TArgs>;
 
 /**
  * @deprecated Use `StoryFn` instead.
@@ -46,7 +46,7 @@ export type StoryObj<TArgs = Args> = StoryAnnotations<HtmlRenderer, TArgs>;
  */
 export type Story<TArgs = Args> = StoryFn<TArgs>;
 
-export type Decorator<TArgs = StrictArgs> = DecoratorFunction<HtmlRenderer, TArgs>;
-export type Loader<TArgs = StrictArgs> = LoaderFunction<HtmlRenderer, TArgs>;
-export type StoryContext<TArgs = StrictArgs> = GenericStoryContext<HtmlRenderer, TArgs>;
-export type Preview = ProjectAnnotations<HtmlRenderer>;
+export type Decorator<TArgs = StrictArgs> = DecoratorFunction<LiquidjsRenderer, TArgs>;
+export type Loader<TArgs = StrictArgs> = LoaderFunction<LiquidjsRenderer, TArgs>;
+export type StoryContext<TArgs = StrictArgs> = GenericStoryContext<LiquidjsRenderer, TArgs>;
+export type Preview = ProjectAnnotations<LiquidjsRenderer>;
