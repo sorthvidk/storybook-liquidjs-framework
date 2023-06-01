@@ -1,0 +1,15 @@
+{
+  "name": "example-vite",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "storybook": "storybook dev -p 6006"
+  },
+  "dependencies": {
+    "@deptdk/liquidjs-framework-vite": "*",
+    "@storybook/addon-essentials": "~7.0.18",
+    "@storybook/addon-interactions": "~7.0.18",
+    "@storybook/addon-links": "~7.0.18",
+    "storybook": "~7.0.18"
+  }
+}

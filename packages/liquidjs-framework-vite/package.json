@@ -1,12 +1,11 @@
 {
-  "name": "@deptdk/liquidjs-renderer",
+  "name": "@deptdk/liquidjs-framework-vite",
   "version": "0.0.1",
-  "description": "Storybook LiquidJS renderer",
-  "homepage": "https://github.com/tflx/storybook/tree/main/packages/storybook-renderer",
+  "description": "Storybook for LiquidJS and Vite: View LiquidJS Components in isolation with Hot Reloading.",
   "repository": {
     "type": "git",
     "url": "https://github.com/tflx/storybook.git",
-    "directory": "packages/liquidjs-renderer"
+    "directory": "packages/liquidjs-framework-vite"
   },
   "license": "MIT",
   "exports": {
@@ -15,10 +14,10 @@
       "import": "./dist/index.mjs",
       "types": "./dist/index.d.ts"
     },
-    "./preview": {
-      "require": "./dist/config.js",
-      "import": "./dist/config.mjs",
-      "types": "./dist/config.d.ts"
+    "./preset": {
+      "require": "./dist/preset.js",
+      "import": "./dist/preset.mjs",
+      "types": "./dist/preset.d.ts"
     },
     "./package.json": {
       "require": "./package.json",
@@ -40,25 +39,24 @@
     "build": "../../scripts/prepare/bundle.ts"
   },
   "dependencies": {
-    "@storybook/addons": "^7.0.0",
-    "@storybook/core-client": "^7.0.0",
-    "@storybook/csf": "~0.1.0",
-    "@storybook/docs-tools": "^7.0.0",
-    "@storybook/preview-web": "^7.0.0",
-    "@storybook/store": "^7.0.0",
+    "@deptdk/liquidjs-preset-webpack": "^0.0.1",
+    "@deptdk/liquidjs-renderer": "^0.0.1",
+    "@storybook/builder-vite": "7.0.0",
+    "@storybook/core-common": "^7.0.0",
+    "@types/node": "^14.14.20 || ^16.0.0",
+    "@vituum/vite-plugin-liquid": "^0.1.5",
     "global": "^4.4.0",
+    "liquidjs": "^10.7.1",
     "react": "16.14.0",
     "react-dom": "16.14.0",
-    "ts-dedent": "^2.0.0"
+    "vite": "^4.3.9",
+    "vite-plugin-html-template": "^1.1.5"
   },
   "devDependencies": {
-    "@types/webpack-env": "^1.18.0",
-    "liquidjs": "^10.7.1",
     "typescript": "~4.6.3"
   },
   "peerDependencies": {
-    "@babel/core": "*",
-    "liquidjs": "^10.7.1"
+    "@babel/core": "*"
   },
   "engines": {
     "node": ">=16"
@@ -69,8 +67,8 @@
   "bundler": {
     "entries": [
       "./src/index.ts",
-      "./src/config.ts"
+      "./src/preset.ts"
     ],
-    "platform": "browser"
+    "platform": "node"
   }
 }
