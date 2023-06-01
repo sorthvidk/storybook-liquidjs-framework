@@ -9,7 +9,6 @@
     "@storybook/addon-essentials": "~7.0.18",
     "@storybook/addon-interactions": "~7.0.18",
     "@storybook/addon-links": "~7.0.18",
-    "@deptdk/liquidjs-renderer": "*",
     "@deptdk/liquidjs-framework-webpack5": "*",
     "storybook": "~7.0.18"
   }
