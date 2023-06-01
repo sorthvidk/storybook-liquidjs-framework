@@ -1,7 +1,7 @@
 import type {
   StorybookConfig as StorybookConfigBase,
   TypescriptOptions as TypescriptOptionsReact,
-} from '@deptdk/liquidjs-preset-webpack';
+} from '@storybook/core-webpack';
 import type {
   StorybookConfigWebpack,
   BuilderOptions,
