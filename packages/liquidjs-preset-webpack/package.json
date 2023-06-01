@@ -1,6 +1,6 @@
 {
-  "name": "@tflx/storybook-preset-webpack",
-  "version": "0.0.6",
+  "name": "@deptdk/liquidjs-preset-webpack",
+  "version": "0.0.1",
   "description": "Storybook for LiquidJS: View LiquidJS Components in isolation with Hot Reloading.",
   "homepage": "https://github.com/tflx/storybook/tree/main/packages/storybook-preset-webpack",
   "repository": {

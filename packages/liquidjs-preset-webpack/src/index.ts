@@ -12,23 +12,9 @@ export const webpack: StorybookConfig['webpack'] = (config) => {
         
       ]
     }
-    /*{
-      test: /\.(png|jpg|gif|woff|woff2)$/,
-      type: 'asset/inline',
-    },
-    {
-      test: /\.(mp4|ogg|svg)$/,
-      type: 'asset/resource',
-    },
-    {
-      test: /\.(glsl|frag|vert|wgsl)$/,
-      type: 'asset/source',
-    },*/
   ];
 
-  // eslint-disable-next-line no-param-reassign
   config.module = config.module || {};
-  // eslint-disable-next-line no-param-reassign
   config.module.rules = rules;
 
   return config;

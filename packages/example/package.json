@@ -6,12 +6,11 @@
     "storybook": "storybook dev -p 6006"
   },
   "dependencies": {
-    "@storybook/addon-essentials": "~7.0.0-beta",
-    "@storybook/addon-interactions": "~7.0.0-beta",
-    "@storybook/addon-links": "~7.0.0-beta",
-    "@tflx/storybook-renderer": "*",
-    "@tflx/storybook-webpack5": "*",
-    "liquidjs": "^10.7.1",
-    "storybook": "~7.0.0-beta"
+    "@storybook/addon-essentials": "~7.0.18",
+    "@storybook/addon-interactions": "~7.0.18",
+    "@storybook/addon-links": "~7.0.18",
+    "@deptdk/liquidjs-renderer": "*",
+    "@deptdk/liquidjs-framework-webpack5": "*",
+    "storybook": "~7.0.18"
   }
 }

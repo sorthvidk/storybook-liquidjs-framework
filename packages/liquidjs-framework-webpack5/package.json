@@ -1,6 +1,6 @@
 {
-  "name": "@tflx/storybook-webpack5",
-  "version": "0.0.6",
+  "name": "@deptdk/liquidjs-framework-webpack5",
+  "version": "0.0.1",
   "description": "Storybook for LiquidJS: View LiquidJS Components in isolation with Hot Reloading.",
   "homepage": "https://github.com/tflx/storybook/tree/main/packages/storybook-webpack5",
   "repository": {
@@ -40,8 +40,8 @@
     "build": "../../scripts/prepare/bundle.ts"
   },
   "dependencies": {
-    "@tflx/storybook-preset-webpack": "^0.0.6",
-    "@tflx/storybook-renderer": "^0.0.6",
+    "@deptdk/liquidjs-preset-webpack": "^0.0.1",
+    "@deptdk/liquidjs-renderer": "^0.0.1",
     "@storybook/builder-webpack5": "^7.0.0",
     "@storybook/core-common": "^7.0.0",
     "@types/node": "^14.14.20 || ^16.0.0",

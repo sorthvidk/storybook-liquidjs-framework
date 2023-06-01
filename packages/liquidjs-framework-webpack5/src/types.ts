@@ -1,14 +1,14 @@
 import type {
   StorybookConfig as StorybookConfigBase,
   TypescriptOptions as TypescriptOptionsReact,
-} from '@tflx/storybook-preset-webpack';
+} from '@deptdk/liquidjs-preset-webpack';
 import type {
   StorybookConfigWebpack,
   BuilderOptions,
   TypescriptOptions as TypescriptOptionsBuilder,
 } from '@storybook/builder-webpack5';
 
-type FrameworkName = '@tflx/storybook-webpack5';
+type FrameworkName = '@deptdk/liquidjs-framework-webpack5';
 type BuilderName = '@storybook/builder-webpack5';
 
 export type FrameworkOptions = {

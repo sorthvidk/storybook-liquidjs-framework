@@ -1,6 +1,6 @@
 {
-  "name": "@tflx/storybook-renderer",
-  "version": "0.0.6",
+  "name": "@deptdk/liquidjs-renderer",
+  "version": "0.0.1",
   "description": "Storybook LiquidJS renderer",
   "homepage": "https://github.com/tflx/storybook/tree/main/packages/storybook-renderer",
   "repository": {

@@ -1,5 +1,5 @@
 module.exports = {
-  stories: ['../stories-liquid/**/*.stories.@(ts|tsx|js|jsx|mdx)'],
+  stories: ['../stories/**/*.stories.@(ts|tsx|js|jsx|mdx)'],
   // staticDirs: ['../stories-liquid'],
   logLevel: 'debug',
   addons: [
@@ -11,12 +11,10 @@ module.exports = {
     '@storybook/addon-highlight',
   ],
   core: {
-    channelOptions: { allowFunction: false, maxDepth: 10 },
     disableTelemetry: true,
   },
   features: {
-    buildStoriesJson: true,
-    breakingChangesV7: true,
+    
   },
-  framework: '@tflx/storybook-webpack5',
+  framework: '@deptdk/liquidjs-framework-webpack5',
 };
