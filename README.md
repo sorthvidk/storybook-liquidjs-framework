@@ -40,10 +40,11 @@ Replace `.storybook/preview.js` with:
 ```javascript
 export const parameters = { 
   liquidjs: {
-    // These options are passed to LiquidJS. Read more in the [LiquidJS Docs](https://liquidjs.com/tutorials/options.html)
+    //These options are passed to LiquidJS
   },
 };
 ```
+Read more about LiquidJS options in the [LiquidJS Docs](https://liquidjs.com/tutorials/options.html)
 
 ---
 
