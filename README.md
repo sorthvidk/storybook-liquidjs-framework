@@ -15,7 +15,7 @@ So you can develop UI components in isolation without worrying about app specifi
 
 ```sh
 cd my-app
-npx storybook@"~7.0.0-beta" init -t html
+npx storybook@latest init -t html
 ```
 
 Remove HTML framework/renderer and install LiquidJS framework/renderer:
@@ -39,9 +39,8 @@ Replace `.storybook/preview.js` with:
 
 ```javascript
 export const parameters = { 
-  layout: 'fullscreen', 
   liquidjs: {
-    // These options are passed to LiquidJS     
+    // These options are passed to LiquidJS. Read more in the [LiquidJS Docs](https://liquidjs.com/tutorials/options.html)
   },
 };
 ```
