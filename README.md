@@ -25,13 +25,19 @@ npm remove @storybook/html @storybook/html-webpack5 --save-dev
 npm install @deptdk/liquidjs-framework-webpack5 --save-dev
 ```
 
+…or if you wanna use Vite
+```sh
+npm remove @storybook/html @storybook/html-webpack5 --save-dev
+npm install @deptdk/liquidjs-framework-vite --save-dev
+```
+
 Replace `.storybook/main.js` with the below, setting up the correct paths as necessary.
 
 ```javascript
 module.exports = {
   // ...
   stories: ['RELATIVE_PATH_TO_STORIES'],
-  framework: '@deptdk/liquidjs-framework-webpack5',
+  framework: '@deptdk/liquidjs-framework-webpack5', // or '@deptdk/liquidjs-framework-vite'
 };
 ```
 
