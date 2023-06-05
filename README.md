@@ -22,7 +22,7 @@ Remove HTML framework/renderer and install LiquidJS framework/renderer:
 
 ```sh
 npm remove @storybook/html @storybook/html-webpack5 --save-dev
-npm install @deptdk/liquidjs-renderer @deptdk/liquidjs-framework-webpack5 --save-dev
+npm install @deptdk/liquidjs-framework-webpack5 --save-dev
 ```
 
 Replace `.storybook/main.js` with the below, setting up the correct paths as necessary.
