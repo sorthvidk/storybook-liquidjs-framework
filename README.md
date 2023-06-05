@@ -1,4 +1,4 @@
-# Storybook for PixiJS
+# Storybook for LiquidJS
 
 ---
 
@@ -12,8 +12,6 @@ So you can develop UI components in isolation without worrying about app specifi
 
 ## Getting Started
 
-We don't currently have a init script for PixiJS storybook. Currently the easiest way is
-to initialize with the html framework and manually edit the configuration:
 
 ```sh
 cd my-app
@@ -24,7 +22,7 @@ Remove HTML framework/renderer and install LiquidJS framework/renderer:
 
 ```sh
 npm remove @storybook/html @storybook/html-webpack5 --save-dev
-npm install @deptdk/liquidjs-renderer @pixi/liquidjs-framework-webpack5 --save-dev
+npm install @deptdk/liquidjs-renderer @deptdk/liquidjs-framework-webpack5 --save-dev
 ```
 
 Replace `.storybook/main.js` with the below, setting up the correct paths as necessary.
