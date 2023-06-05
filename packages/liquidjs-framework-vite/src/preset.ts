@@ -1,9 +1,6 @@
 import type { PresetProperty } from '@storybook/types';
 import type { StorybookConfig } from './types';
-import { mergeConfig, type PluginOption } from 'vite';
-import { Liquid } from 'liquidjs';
-// import liquid from '@vituum/vite-plugin-liquid'
-import { IndexHtmlTransformContext, Plugin as VitePlugin, normalizePath } from 'vite';
+import { Plugin as VitePlugin } from 'vite';
 
 export const core: PresetProperty<'core', StorybookConfig> = {
   builder: '@storybook/builder-vite',
@@ -11,32 +8,25 @@ export const core: PresetProperty<'core', StorybookConfig> = {
 };
 
 function vitePluginTemplate(): VitePlugin {
-  const fileRegex = /\.(liquid)$/
-
   return {
     // plugin name
     name: 'vite-plugin-liquidjs',
     enforce: 'pre',
     
-    async transform(code, id) {
-      console.log(code);
-      
-      if (fileRegex.test(id)) {
-        // const template = compile(html, compileOptions);
-        const engine = new Liquid({});
-    
-        const result = await engine.parseAndRender(code, {})
-        return result
+    async transform(code, id, options) {
+      if (/^.*\.liquid$/g.test(id)) {
+        code = `export default \`${code.toString()}\``
+        return { code }
       }
-    }, 
+    }
   }
 }
 
 
 export const viteFinal: StorybookConfig['viteFinal'] = async (config, { presets }) => {
-  
   const { plugins = [] } = config;
-  plugins.push(vitePluginTemplate())
+  plugins.push(vitePluginTemplate());
+  
   return {
     ...config,
     plugins,
