@@ -1,7 +1,7 @@
 export const parameters = {
   layout: 'fullscreen',
   liquidjs: {
-    // root: ['stories/'],
+    // partials: ['stories/'],
     // layouts: ['layouts'],
     extname: '.liquid',
   },
