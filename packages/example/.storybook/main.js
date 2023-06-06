@@ -1,6 +1,9 @@
 module.exports = {
-  stories: ['../stories/**/*.stories.@(ts|tsx|js|jsx|mdx)'],
-  // staticDirs: ['../stories-liquid'],
+  stories: [
+    '../components/**/*.stories.@(ts|tsx|js|jsx|mdx)',
+    '../pages/**/*.stories.@(ts|tsx|js|jsx|mdx)'
+  ],
+  staticDirs: ['../components', '../layouts'],
   logLevel: 'debug',
   addons: [
     '@storybook/addon-actions',
