@@ -43,9 +43,7 @@ export function renderToCanvas(
 
   
   if (typeof element === 'object' && template) {
-    if (!engine) engine = new Liquid(parameters.liquidjs || {});
-    console.log(parameters.liquidjs);
-    
+    if (!engine) engine = new Liquid(parameters.liquidjs || {});    
     
     engine
       .parseAndRender(template, args)
