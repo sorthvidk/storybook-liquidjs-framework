@@ -5,7 +5,7 @@
 Storybook for LiquidJS is a UI development environment for your LiquidJS Components.
 With it, you can visualize different states of your Components and develop them interactively.
 
-![Storybook Screenshot](https://github.com/storybookjs/storybook/blob/main/media/storybook-intro.gif)
+![Storybook Screenshot](https://raw.githubusercontent.com/storybookjs/brand/37c5e9bde5c56b69a8c4312de7d60fb3a9d7de9d/icon/icon-storybook-default.svg)
 
 Storybook runs outside of your app.
 So you can develop UI components in isolation without worrying about app specific dependencies and requirements.
@@ -15,19 +15,19 @@ So you can develop UI components in isolation without worrying about app specifi
 
 ```sh
 cd my-app
-npx storybook@latest init -t html
+npx storybook@latest init --type html
 ```
 
 Remove HTML framework/renderer and install LiquidJS framework/renderer:
 
 ```sh
-npm remove @storybook/html @storybook/html-webpack5 --save-dev
+npm remove @storybook/html @storybook/html-webpack5
 npm install @deptdk/liquidjs-framework-webpack5 --save-dev
 ```
 
 …or if you wanna use Vite
 ```sh
-npm remove @storybook/html @storybook/html-webpack5 --save-dev
+npm remove @storybook/html @storybook/html-webpack5
 npm install @deptdk/liquidjs-framework-vite --save-dev
 ```
 
