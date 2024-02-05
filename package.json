@@ -4,6 +4,10 @@
   "workspaces": [
     "packages/*"
   ],
+  "author": {
+    "name": "@deptdk, Torben Larsen"
+  },
+  "license": "ISC",
   "scripts": {
     "build": "nx run-many --target=build --all --parallel",
     "build:force": "npm run build -- --skip-nx-cache",
@@ -11,6 +15,18 @@
     "check": "lerna run check",
     "publish": "lerna publish --no-private"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sorthvidk/storybook-liquidjs-framework.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sorthvidk/storybook-liquidjs-framework/issues"
+  },
+  "keywords": [
+    "storybook",
+    "liquidjs",
+    "framework"
+  ],
   "devDependencies": {
     "@types/fs-extra": "^9.0.6",
     "chalk": "^4.1.0",
