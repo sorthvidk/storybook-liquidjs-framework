@@ -15,6 +15,7 @@
     "check": "lerna run check",
     "publish": "lerna publish --no-private"
   },
+  "homepage": "https://github.com/sorthvidk/storybook-liquidjs-framework",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sorthvidk/storybook-liquidjs-framework.git"
