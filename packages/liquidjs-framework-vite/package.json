@@ -68,5 +68,10 @@
       "./src/preset.ts"
     ],
     "platform": "node"
-  }
+  },
+  "keywords": [
+    "storybook",
+    "liquidjs",
+    "framework"
+  ]
 }

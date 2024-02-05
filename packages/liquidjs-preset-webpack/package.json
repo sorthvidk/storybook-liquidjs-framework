@@ -64,5 +64,10 @@
       "./src/index.ts"
     ],
     "platform": "node"
-  }
+  },
+  "keywords": [
+    "storybook",
+    "liquidjs",
+    "framework"
+  ]
 }

@@ -72,5 +72,10 @@
       "./src/config.ts"
     ],
     "platform": "browser"
-  }
+  },
+  "keywords": [
+    "storybook",
+    "liquidjs",
+    "framework"
+  ]
 }
