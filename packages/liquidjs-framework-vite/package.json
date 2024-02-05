@@ -1,6 +1,6 @@
 {
   "name": "@deptdk/liquidjs-framework-vite",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Storybook for LiquidJS and Vite: View LiquidJS Components in isolation with Hot Reloading.",
   "homepage": "https://github.com/sorthvidk/storybook-liquidjs-framework",
   "repository": {
@@ -40,8 +40,8 @@
     "build": "../../scripts/prepare/bundle.ts"
   },
   "dependencies": {
-    "@deptdk/liquidjs-preset-webpack": "^0.2.3",
-    "@deptdk/liquidjs-renderer": "^0.2.3",
+    "@deptdk/liquidjs-preset-webpack": "^0.2.4",
+    "@deptdk/liquidjs-renderer": "^0.2.4",
     "@storybook/builder-vite": "7.0.0",
     "@storybook/core-common": "^7.0.0",
     "@types/node": "^14.14.20 || ^16.0.0",
