@@ -1,6 +1,6 @@
 {
   "name": "@deptdk/liquidjs-preset-webpack",
-  "version": "0.2.0",
+  "version": "0.0.1",
   "description": "Storybook for LiquidJS: View LiquidJS Components in isolation with Hot Reloading.",
   "repository": {
     "type": "git",
@@ -41,10 +41,10 @@
   "dependencies": {
     "@storybook/core-webpack": "^7.0.0",
     "@types/node": "^16.0.0",
-    "html-loader": "^2.1.2",
     "react": "16.14.0",
     "react-dom": "16.14.0",
-    "webpack": "5"
+    "webpack": "5",
+    "html-loader": "^2.1.2"
   },
   "devDependencies": {
     "typescript": "~4.6.3"
